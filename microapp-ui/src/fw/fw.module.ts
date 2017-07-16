@@ -1,3 +1,5 @@
+import { LoaderIconComponent } from './loader-icon/loader-icon.component';
+import { LoaderIconService } from './services/loader-icon.service';
 import { DialogComponent } from './dialog/dialog.component';
 import { AppComponent } from './../app/app.component';
 import { FrameworkConfigService } from './services/framework-config.service';
@@ -28,6 +30,7 @@ import {MaterialModule, MdNativeDateModule, MdRadioModule} from '@angular/materi
     FrameworkBodyComponent,
     ContentComponent,
     TitleBarComponent,
+    LoaderIconComponent,
     RibbonComponent,
     TilesListComponent,
     FooterComponent,
@@ -36,12 +39,15 @@ import {MaterialModule, MdNativeDateModule, MdRadioModule} from '@angular/materi
 ],
 entryComponents: [DialogComponent],
 providers: [
-  FrameworkConfigService
+
+  FrameworkConfigService,
+  LoaderIconService
 ],
 bootstrap:[AppComponent],
   exports: [
     FrameworkBodyComponent,
-    TitleBarComponent
+    TitleBarComponent,
+    LoaderIconComponent
   ]
 })
 export class FwModule {

@@ -1,3 +1,4 @@
+import { LoaderIconService } from './../fw/services/loader-icon.service';
 import { FrameworkConfigService, FrameWorkConfigSettings } from './../fw/services/framework-config.service';
 import { HttpModule } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  constructor(private frameworkConfigService: FrameworkConfigService) {
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+     this.spinnerService.showLoader = true;
+     this.spinnerService.start();
+     setTimeout(() => { this.spinnerService.stop(); },1000);
+  }
+  constructor(private frameworkConfigService: FrameworkConfigService, private spinnerService: LoaderIconService) {
     const config: FrameWorkConfigSettings = {
       panelIcons : [
         /* I know. We will need to use SVGs! 

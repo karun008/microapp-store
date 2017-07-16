@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {DialogComponent} from '../dialog/dialog.component';
 import {MdIconRegistry, MdDialog} from '@angular/material';
 import {MdDatepickerModule, MdNativeDateModule, MdRadioModule} from '@angular/material';
+//import { SpinnerService } from 'angular-spinners';
+
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'fw-framework-body',
@@ -77,6 +79,7 @@ orders = [
     //this.isDarkTheme = !isDarkTheme;
   }
   ngOnInit() {
+     
   }
 
 }
