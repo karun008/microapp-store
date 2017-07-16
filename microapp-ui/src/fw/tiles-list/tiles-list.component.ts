@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class TilesListComponent implements OnInit {
  tiles = [
  {
-   name : 'Outages',
+   name : 'Events',
    detail: '2 found'
  },
  {
-   name : 'Work orders',
+   name : 'Workers',
    detail: '1 found'
  }
  ];

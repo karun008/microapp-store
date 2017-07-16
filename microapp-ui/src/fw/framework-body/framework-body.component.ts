@@ -21,13 +21,13 @@ export class FrameworkBodyComponent implements OnInit {
 
 orders = [
     {
-      type: 'Trouble Call',
+      type: 'Freelancers',
       number: '1090232102323',
       date: '24 April 2017',
       status: 'Open'
     },
     {
-      type: 'Special Request',
+      type: 'Bidding',
       number: '1020232102323',
       date: '01 March 2017',
       status: 'Completed'
@@ -37,13 +37,13 @@ orders = [
 
   categories = [
     {
-      title: 'Outages',
-      details: '2 outstanding',
+      title: 'Freelancers',
+      details: '',
       number :'2'
     },
     {
-      title: 'Work Orders',
-      details: '1 Open work order',
+      title: 'Bidding',
+      details: '',
       number :'1'
     },
     {
@@ -53,17 +53,17 @@ orders = [
     },
     {
       title: 'Tickets',
-      details: '1 Closed ticket',
+      details: '',
       number :'4'
     },
     {
-      title: 'Devices',
-      details: 'Closed ticket',
+      title: 'Service Requests',
+      details: '',
       number :'4'
     },
     {
-      title: 'Existing Services',
-      details: 'Triple Play',
+      title: 'History',
+      details: '',
       number :'3'
     }
 
