@@ -1,0 +1,7 @@
+<a *ngFor="let icon of frameworkConfigService.panelIcons" 
+   [href]="icon.alt" 
+   [title]="icon.alt">
+   <img class="ribbon" 
+    [src]="icon.imageFile" 
+    [alt]="icon.alt" height="30px" width="30px">
+</a>

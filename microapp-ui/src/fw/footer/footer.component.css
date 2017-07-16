@@ -1,0 +1,5 @@
+:host {
+    display: flex;
+    min-height: 10;
+    background-color:black;
+}

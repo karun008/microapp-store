@@ -1,0 +1,42 @@
+
+<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
+  <md-toolbar  color="primary" >
+    <fw-title-bar></fw-title-bar>
+    <h2><span><b>Einstein NG</b></span></h2>
+    <span fxFlex></span>
+     <button md-icon-button [mdMenuTriggerFor]="themeMenu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+   <div class="content">  
+    <md-sidenav-container >
+       <fw-ribbon >
+       </fw-ribbon>
+      </md-sidenav-container>
+      
+      <md-grid-list cols="6" rowHeight="100px" fxFlex>
+        
+        <md-grid-tile 
+            *ngFor="let category of categories"
+            [colspan]="2"
+            [rowspan]="2"
+            [style.background]="isDarkTheme ? 'lightblue':'lightpink'" (click)="openAdminDialog()" >
+             <h2 md-line> 
+            <span ><b>{{category.title}}</b></span>
+            </h2>
+            
+            <p md-line> 
+             <span><b>{{category.number}}</b></span>
+           </p>
+        </md-grid-tile>
+      </md-grid-list>
+
+     </div>
+    
+      <md-menu #themeMenu x-position="before">
+    <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+  </md-menu>
+  
+</div>
+
+<!--fw-footer></fw-footer-->

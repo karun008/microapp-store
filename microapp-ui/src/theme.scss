@@ -1,0 +1,74 @@
+@import '~@angular/material/_theming';
+
+@include mat-core();
+
+$primary: mat-palette($mat-red);
+$accent: mat-palette($mat-blue);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+.dark-theme {
+  $dark-primary: mat-palette($mat-light-blue);
+  $dark-accent: mat-palette($mat-green);
+
+  $dark-theme: mat-dark-theme($dark-primary, $dark-accent);
+
+  @include angular-material-theme($dark-theme);
+}
+
+/* E360 standard Date Picker UI changes */
+
+.mat-calendar-previous-button.mat-icon-button {
+    position: absolute;
+}
+
+.mat-calendar-next-button.mat-icon-button {
+    position: absolute;
+    right: 0px;
+}
+
+.mat-calendar-period-button.mat-button {
+    margin: auto;
+}
+
+.mat-calendar-period-button.mat-button:hover {
+    color: #000;
+}
+
+.mat-calendar-period-button.mat-button .mat-button-focus-overlay {
+  display: none;
+}
+
+.mat-calendar-period-button.mat-button .mat-calendar-arrow {
+  display: none;
+}
+
+.mat-calendar-spacer {
+    display: none;
+}
+
+.mat-calendar-body-cell-content.mat-calendar-body-selected {
+  background-color: #fff;
+  color: #000;
+  border-bottom: 3px solid#2B9CD8;
+  border-radius: 0px;
+}
+
+.mat-calendar-body-cell-content.mat-calendar-body-today {
+  background-color: #fff;
+  color: #000;
+  border-bottom: 3px solid#19A926;
+  border-radius: 0px;
+}
+
+.mat-calendar-body-cell.mat-calendar-body-active .mat-calendar-body-today:not(.mat-calendar-body-selected) {
+  border: none;
+  border-bottom: 3px solid#19A926;
+  border-color: #19A926;
+}
+
+.mat-calendar-previous-button::after, .mat-calendar-next-button::after, .mat-calendar-period-button.mat-button .mat-button-wrapper {
+  color: #2B9CD8;
+}
